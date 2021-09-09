@@ -1,0 +1,13 @@
+body{
+    top: 20vh;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(87, 113, 139);
+    overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+h1{
+    padding-top: 5%;
+}
