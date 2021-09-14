@@ -1,9 +1,9 @@
 const menuItems = [
    
    
-    {title: 'DATA', link: '../graphs/graphs.html'},
-    {title: 'THEORY', link: '../theory/theory.html'},
-    {title: 'FRAMEWORK', link: '../template/template.html'},
+    {title: 'DATA', link: 'graphs/graphs.html'},
+    {title: 'THEORY', link: 'theory/theory.html'},
+    {title: 'FRAMEWORK', link: 'template/template.html'},
 
 ]
 

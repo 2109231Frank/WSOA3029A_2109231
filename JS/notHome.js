@@ -1,6 +1,6 @@
 const menuItems = [
    
-    {title: 'HOME', link: '../home/index.html'},
+    {title: 'HOME', link: '../index.html'},
     {title: 'DATA', link: '../graphs/graphs.html'},
     {title: 'THEORY', link: '../theory/theory.html'},
     {title: 'FRAMEWORK', link: '../template/template.html'},
