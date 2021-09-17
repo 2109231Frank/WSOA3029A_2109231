@@ -1,12 +1,12 @@
 
 nav{
-    opacity: 0.9;
+    opacity: 1;
     position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 13vh;
-    background-color: rgb(59, 78, 97);
+    background-color: rgb(172, 110, 30);
     font-family: 'Exo 2',sans-serif;
     width: 100%;
     top: 0%;
@@ -15,8 +15,8 @@ nav{
 }
 
 nav a{
-    font-family: 'Exo 2',sans-serif;
-    color:rgb(206, 118, 60);
+    font-family: 'Acme', sans-serif;
+    color: rgb(206, 206, 206);
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
@@ -45,7 +45,7 @@ nav a:hover{
     }
   
     nav ul{
-        background-color: rgb(77, 105, 131);
+        
         display: flex;
         padding-right: 3vh;
     }
@@ -54,10 +54,9 @@ nav a:hover{
        font-size: 20px;
        padding-right: 1vh;
    }
-   nav a:hover{ 
-        font-size: 20px;
+   
 }   
-}
+
 
 @media screen and (max-width:400px){
     body{
@@ -66,7 +65,7 @@ nav a:hover{
 
 
 nav ul{
-    background-color: rgb(175, 119, 81);
+   
     display: flex;
     padding-right: 3vh;
 }
