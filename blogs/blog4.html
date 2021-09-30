@@ -18,10 +18,24 @@
 </head>
 <body>
     <header>
+        <script>
+            const menuItemBlogs = [{title: 'BACK', link: '../theory/theory.html'}]
+                const initialiseMenu = () => {
+                    const nav = document.querySelector('nav');
+                    const ul = document.createElement('ul');
+                        for(let item of menuItemBlogs) {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.innerText = item.title;
+                            a.href = item.link;
+                            li.appendChild(a);
+                            ul.appendChild(li);
+                        }
+                    nav.appendChild(ul);
+                };
+            document.addEventListener('DOMContentLoaded', () => initialiseMenu());
+            </script>
         <nav>
-            <ul>
-                <li><a href="../theory/theory.html">BACK</a></li>
-            </ul>
         </nav>
     </header>
     <main>
@@ -34,7 +48,7 @@
                 parties (during election times). Thompson continues to explain that data visualization 
                 is not a new invention; in fact, people have been using imagery to cut through the dense 
                 data that they have to work with throughout history (Thompson, 2016).</p>
-                <br><br>
+                
                 <p>Thompson explains that data visualization has created a new type of citizen; a citizen 
                 that is educated with statistical thinking. Clive provides a number of examples of data 
                 visualizations throughout history and the effect of this way of displaying information. 
@@ -57,7 +71,7 @@
                 been avoided with proper living and healthcare conditions (Tableau.com, n.d.). One can 
                 imagine that thanks to Nightingale it was a lot easier to take the appropriate steps in 
                 order to protect the soldiers or to prevent any more unnecessary deaths.</p>
-                <br><br>
+                
                 <p>This is just one example of historical data visualization that blatantly shows the 
                 importance of presenting data in a way that anyone can understand it. Without creating 
                 digestible/usable information from the mass of raw data out there in the world; there 

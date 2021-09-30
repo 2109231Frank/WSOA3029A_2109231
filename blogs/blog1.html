@@ -18,10 +18,24 @@
 </head>
 <body>
     <header>
+    <script>
+    const menuItemBlogs = [{title: 'BACK', link: '../theory/theory.html'}]
+        const initialiseMenu = () => {
+            const nav = document.querySelector('nav');
+            const ul = document.createElement('ul');
+                for(let item of menuItemBlogs) {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.innerText = item.title;
+                    a.href = item.link;
+                    li.appendChild(a);
+                    ul.appendChild(li);
+                }
+            nav.appendChild(ul);
+        };
+    document.addEventListener('DOMContentLoaded', () => initialiseMenu());
+    </script>
         <nav>
-            <ul>
-                <li><a href="../theory/theory.html">BACK</a></li>
-            </ul>
         </nav>
     </header>
     <main>
@@ -40,7 +54,7 @@
                 software  to  do  this  for  us  (Friendly,  2009).  Traditional  data visualisation is focused on the 
                 communication for understanding data rather than any other approaches, and this type of data visualisation 
                 has a number of advantages. These advantages include:</p>
-                <br>
+                
                 <ul>
                     <li>It has the ability to visually represent a vast amount of data immediately.</li>
                     <li>It  enables  viewers  or  analysts  to  immediately  view  emergent  patterns  within  
@@ -49,7 +63,7 @@
                         the identification of problems are revealed almost immediately through data analysis.</li>
                     <li>It improves the understanding of large- and small-scale data.</li>        
                 </ul>
-                <br>
+                
                 <p>The reason for the importance of data visualisation is, simply put, that it allows us 
                 to see and understand patterns  and  relationships  within  data,  which  is  crucial  to  a  variety  of  important  
                 decisions  within businesses etc. Data and information go hand in hand and the definitions on both of these concepts 

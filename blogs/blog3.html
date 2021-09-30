@@ -18,10 +18,24 @@
 </head>
 <body>
     <header>
+        <script>
+            const menuItemBlogs = [{title: 'BACK', link: '../theory/theory.html'}]
+                const initialiseMenu = () => {
+                    const nav = document.querySelector('nav');
+                    const ul = document.createElement('ul');
+                        for(let item of menuItemBlogs) {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.innerText = item.title;
+                            a.href = item.link;
+                            li.appendChild(a);
+                            ul.appendChild(li);
+                        }
+                    nav.appendChild(ul);
+                };
+            document.addEventListener('DOMContentLoaded', () => initialiseMenu());
+            </script>
         <nav>
-            <ul>
-                <li><a href="../theory/theory.html">BACK</a></li>
-            </ul>
         </nav>
     </header>
     <main>
@@ -35,20 +49,20 @@
                 explains the relationship between representation and meaning. The most important tool or 
                 agent of representing reality (our view of reality) is language (Kidd, 2015). I feel like the 
                 language I should use must portray the reality that my data represents.</p>
-                <br><br>
+                
                 <p>UI or User Interface refers to the overall look of the site. My website will utilize basic colours 
                 and the styles throughout the pages will be minimalistic. I will try to keep the colours of my 
                 website basic and dark while adding minimal soft contrasts so that it does not hurt the user’s eyes. I 
                 feel like the website will look good. I’m not planning to make the website overly complicated seeing 
                 that I think it will take away from the narrative I will be trying to portray.</p>
-                <br><br>
+                
                 <p>Looking back to Kidd’s reading I realise that my website will have to focus on representing reality 
                 and I will have to express why I think this narrative is an important one to tell. Going forward I 
                 feel like I should focus on representing my character/narrative more seeing that my character felt 
                 more like an afterthought in my previous website. What I am planning to keep is the colours and 
                 styles since I liked the clean and simple look of my website, however I do feel like adding a bit 
                 more interesting components would be beneficial.</p>
-                <br><br>
+                
                 <p>Ultimately, I believe that the UX and UI of my website will work relatively well. I think that I was 
                 lacking in the UX in my previous website seeing that the website was not particularly interesting 
                 while making it feel like an assignment instead of the website of my character. The UI on the other 

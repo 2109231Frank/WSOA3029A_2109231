@@ -18,19 +18,33 @@
 </head>
 <body>
     <header>
+        <script>
+            const menuItemBlogs = [{title: 'BACK', link: '../theory/theory.html'}]
+                const initialiseMenu = () => {
+                    const nav = document.querySelector('nav');
+                    const ul = document.createElement('ul');
+                        for(let item of menuItemBlogs) {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.innerText = item.title;
+                            a.href = item.link;
+                            li.appendChild(a);
+                            ul.appendChild(li);
+                        }
+                    nav.appendChild(ul);
+                };
+            document.addEventListener('DOMContentLoaded', () => initialiseMenu());
+            </script>
         <nav>
-            <ul>
-                <li><a href="../theory/theory.html">BACK</a></li>
-            </ul>
         </nav>
     </header>
     <main>
         <body>
             <h1>UX & UI ANALYSIS</h1>  
             <article>
-                I will be analysing the website Ulwazi seeing that it is the website that I use 
+                <p>I will be analysing the website Ulwazi seeing that it is the website that I use 
                 most days. I will be forming this analysis by looking at the design, UI and UX 
-                of Ulwazi’s home page. Below is a screenshot of the home page.
+                of Ulwazi’s home page. Below is a screenshot of the home page.</p>
                 <br>
                 <img class="blogImage" src = "../images/UlwaziHome.png" 
                 alt = "Screenshot of my Ulwazi home page showing">
@@ -45,8 +59,7 @@
                 to figure out where to navigate in order to find the desired web pages. Ultimately 
                 the UI of Ulwazi is clean, clear and simple; this is why I believe the UI design is 
                 well done.</p>
-                <br>
-                <br>
+                
                 <p>The UX (User Experience) refers to the site user’s overall experience when interacting 
                 with the website. Whilst using Ulwazi I want to find assignments or tasks that I need 
                 to do as well as readings and other files. Finding these things need to be easy seeing 
@@ -56,8 +69,7 @@
                 the site. There are notifications that show you which course has new files, new 
                 assignments/tasks, and new announcements. Using the website is easy and fast, which is 
                 exactly what is needed from this type of website.</p>
-                <br>
-                <br>
+                
                 <p>In Kidd’s article, Representation Ch1 Theories of Representation, 2015. He notes and 
                 discusses various interesting theories on representation with regards to imagery, 
                 photography, journalism, politics and the media. Unfortunately, I failed to see how I 

@@ -3,7 +3,7 @@ body{
     border: none;
     margin: 0;
     padding: 0;
-    background: radial-gradient(rgb(74, 89, 104) , rgb(47, 53, 59));
+    background: radial-gradient(rgb(36, 43, 49) , rgb(66, 76, 87));
     overflow-x: hidden;
   background-attachment: fixed;
   font-family: 'Acme', sans-serif;
@@ -52,9 +52,14 @@ footer{
   text-decoration: none;
 }
 
+ul{
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
 .blogImage{
   width: 80%;
-  height: 60%;
+  height: 70%;
   transform: translateX(12%);
   padding: 2%;
 }

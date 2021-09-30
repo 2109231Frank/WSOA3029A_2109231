@@ -18,10 +18,24 @@
 </head>
 <body>
     <header>
+        <script>
+            const menuItemBlogs = [{title: 'BACK', link: '../theory/theory.html'}]
+                const initialiseMenu = () => {
+                    const nav = document.querySelector('nav');
+                    const ul = document.createElement('ul');
+                        for(let item of menuItemBlogs) {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.innerText = item.title;
+                            a.href = item.link;
+                            li.appendChild(a);
+                            ul.appendChild(li);
+                        }
+                    nav.appendChild(ul);
+                };
+            document.addEventListener('DOMContentLoaded', () => initialiseMenu());
+            </script>
         <nav>
-            <ul>
-                <li><a href="../theory/theory.html">BACK</a></li>
-            </ul>
         </nav>
     </header>
     <main>
@@ -34,7 +48,7 @@
                 to share information effectively, your data visualization must be visually accessible. 
                 This can be done in many ways, such as: colour choices, font size and placement, graph 
                 type and title/label choices (Knaflic, 2015).</p>
-                <br><br>
+                
                 <p>While reading this chapter it became clear that one should think about almost every 
                 aspect of your graph in order to ensure that the information will be read clearly. 
                 Another important design choice is the one that emphasises the point of the graph 
@@ -43,13 +57,13 @@
                 viewer’s eye will move over the graph and where their eyes will stop and focus. By 
                 manipulating this we can portray the narrative we want to portray with our data 
                 (Knaflic, 2015).</p>
-                <br><br>
+                
                 <p>Knaflic expresses that one should consider every data visualization that is confronted 
                 as a learning opportunity. One should look at graphs and the design choices that were 
                 made and learn what the designer did right and wrong (Knaflic, 2015). By doing this 
                 you will create a vast library of ideas you can implement into your own data 
                 visualizations (Knaflic, 2015).</p>
-                <br><br>
+                
                 <p>Ultimately a good visual model is clear, simple and was created with the viewer in mind. 
                 You should always look at visual models in such a way that you learn something from them. 
                 In order to portray narratives with your data you need to have a clear point or pattern 
