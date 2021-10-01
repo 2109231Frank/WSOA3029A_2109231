@@ -1,8 +1,10 @@
 body{
-    
+    position: relative;
+    min-height: 100hv;
     border: none;
     margin: 0;
     padding: 0;
+    padding-bottom: 10%;
     background: radial-gradient(rgb(36, 43, 49) , rgb(66, 76, 87));
     overflow-x: hidden;
   background-attachment: fixed;
@@ -12,6 +14,7 @@ body{
 p{
   margin-left: 12%;
   margin-right: 12%;
+  font-size: 25px;
 }
 
 h1{
@@ -30,18 +33,20 @@ h2{
 article{
   color: rgb(206, 206, 206);
   text-align: justify;
-  font-size: 24px;
   padding-left: 8%;
   padding-right: 8%;
+  padding-bottom: 15%;
 }
 
 footer{
   background-color: rgb(172, 110, 30);
-  margin-top: 12%;
   padding: 1%;
+  padding-right: 100%;
   padding-left: 5%;
   color: rgb(206, 206, 206);
   font-size: 24px;
+  bottom: 0;
+  position: absolute;
 }
 
 .onPageLinks a{
@@ -52,14 +57,19 @@ footer{
   text-decoration: none;
 }
 
+.onPageLinks a:hover{
+  font-size: 30px;
+}
+
 ul{
   padding-left: 12%;
   padding-right: 12%;
+  font-size: 25px;
 }
 
 .blogImage{
   width: 80%;
-  height: 70%;
+  height: 80%;
   transform: translateX(12%);
   padding: 2%;
 }
@@ -69,11 +79,66 @@ ul{
 @media screen and (max-width:800px){
   body{
     padding-top: 10%;
+    padding-bottom: 20%;
   }
+
+  footer{
+    margin-top: 25%;
+    font-size: 15px;
+  }
+
+  h1{
+    font-size: 30px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  .blogImage{
+    width: 90%;
+    height: 90%;
+    transform: translateX(4%);
+  }  
+
+  p{
+    margin-left: 8%;
+    margin-right: 8%;
+    font-size: 15px;
+  }
+
+  .onPageLinks a{
+    font-size: 15px;
+  }
+
 }
 
 @media screen and (max-width:400px){
   body{
     padding-top: 15%;
+    padding-bottom: 63.5%;
   }
+  p{
+    font-size: 12px;
+  }
+  h1{
+    padding-top: 10%;
+    font-size: 20px;
+  }
+  h2{
+    font-size: 15px;
+  }
+  .onPageLinks a{
+    font-size: 12px;
+  }
+  ul{
+    font-size: 12px;
+  }
+
+  footer{
+    font-size: 12px;
+  }
+  .blogImage{
+    width: 90%;
+    height: 60%;
+    transform: translateX(4%);
+  }  
 }
