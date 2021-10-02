@@ -1,9 +1,10 @@
 const menuItems = [
    
-   
-    {title: 'DATA', link: 'graphs/graphs.html'},
     {title: 'THEORY', link: 'theory/theory.html'},
+    {title: 'DATA', link: 'graphs/graphs.html'},
     {title: 'DESIGN', link: 'template/template.html'},
+    
+    
 
 ]
 

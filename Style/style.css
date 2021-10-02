@@ -5,7 +5,7 @@ body{
     margin: 0;
     padding: 0;
     padding-bottom: 10%;
-    background: radial-gradient(rgb(36, 43, 49) , rgb(66, 76, 87));
+    background: radial-gradient(rgb(36, 43, 49) , rgb(68, 80, 92));
     overflow-x: hidden;
   background-attachment: fixed;
   font-family: 'Acme', sans-serif;
@@ -104,7 +104,9 @@ ul{
     margin-right: 8%;
     font-size: 15px;
   }
-
+  ul{
+    font-size: 15px;
+  }
   .onPageLinks a{
     font-size: 15px;
   }
