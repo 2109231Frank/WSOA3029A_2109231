@@ -74,6 +74,13 @@ ul{
   padding: 2%;
 }
 
+.infoBeautyImage{
+  width: 80%;
+  height: 60vh;
+  transform: translateX(12%);
+  padding: 2%;
+}
+
 
 
 @media screen and (max-width:800px){
@@ -110,6 +117,9 @@ ul{
   .onPageLinks a{
     font-size: 15px;
   }
+  .onPageLinks a:hover{
+    font-size: 15px;
+  }
 
 }
 
@@ -131,6 +141,9 @@ ul{
   .onPageLinks a{
     font-size: 12px;
   }
+  .onPageLinks a:hover{
+    font-size: 12px;
+  }
   ul{
     font-size: 12px;
   }
@@ -143,4 +156,10 @@ ul{
     height: 60%;
     transform: translateX(4%);
   }  
+  .infoBeautyImage{
+    width: 100%;
+    height: 35vh;
+    transform: translateX(3%);
+    padding: 1%;
+  }
 }

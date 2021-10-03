@@ -288,7 +288,7 @@ else
             radius = Math.min(width, height)/2
 
     var g = svg.append('g')
-        .attr('transform', `translate(${width/2-200}, ${height/2})`)
+        .attr('transform', `translate(${width/2-110}, ${height/2})`)
 
     var color = d3.scaleOrdinal(['#c48612','#c47412','#c46b12',
     '#c45c12','#c45312','#c44712','#c43012','#96250e','#6e1a09'])
