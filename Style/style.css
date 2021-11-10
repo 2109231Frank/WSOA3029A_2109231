@@ -11,6 +11,10 @@ body{
   font-family: 'Acme', sans-serif;
 }
 
+#graph3{
+  padding-bottom: 10%;
+}
+
 p{
   margin-left: 12%;
   margin-right: 12%;

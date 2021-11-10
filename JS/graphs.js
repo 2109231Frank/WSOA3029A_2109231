@@ -323,6 +323,136 @@ else
     .attr('fill', 'rgb(206,206,206)')
 }
 }
-//initializing both graphs.
+
+  //Function that gets data from API and creates the Interactive graph for Dar Es Salaam.
+  async function getInteractiveData()
+ { 
+    
+    //Laptop view
+     if(window.screen.width > 430)
+    {
+        
+            
+            
+           
+             //API request for Salaam
+    const response = await fetch('https://api.teleport.org/api/urban_areas/slug:dar-es-salaam/scores/');
+    const dataDES = await response.json();
+    
+   console.log('DES Data',dataDES.categories);
+
+    //Sorting data for Dar Es Salaam    
+    const graphDataDES = [ 
+        {id: 'd1', name: dataDES.categories[5].name, score: parseInt(dataDES.categories[5].score_out_of_10)},
+        {id: 'd2', name: dataDES.categories[1].name, score: parseInt(dataDES.categories[1].score_out_of_10)},
+        {id: 'd3', name: dataDES.categories[7].name, score: parseInt(dataDES.categories[7].score_out_of_10)},
+        {id: 'd4', name: dataDES.categories[0].name, score: parseInt(dataDES.categories[0].score_out_of_10)},
+        {id: 'd5', name: dataDES.categories[8].name, score: parseInt(dataDES.categories[8].score_out_of_10)},
+        {id: 'd6', name: dataDES.categories[13].name, score: parseInt(dataDES.categories[13].score_out_of_10)},
+        {id: 'd7', name: dataDES.categories[14].name, score: parseInt(dataDES.categories[14].score_out_of_10)},
+        {id: 'd8', name: dataDES.categories[11].name, score: parseInt(dataDES.categories[11].score_out_of_10)},
+        {id: 'd9', name: dataDES.categories[15].name, score: parseInt(dataDES.categories[15].score_out_of_10)},
+    ]; 
+    
+    var data = d3.pie().sort(null).value(function(d){return d.score;})(graphDataDES);
+    
+
+    
+
+    var svg = d3.select('#graph3'),
+    
+            width = svg.attr('width'),
+            height = svg.attr('height'),
+            radius = Math.min(width, height)/2
+
+    var g = svg.append('g')
+        .attr('transform', `translate(${width/2}, ${height/2})`)
+
+    var color = d3.scaleOrdinal(['#6e1a09','#96250e','#c43012','#c44712',
+    '#c45312','#c45c12','#c46b12','#c47412','#c48612'])
+    
+    
+    var arc = d3.arc()
+        .innerRadius(20)
+        .outerRadius(radius - 50)
+        .padAngle(.1)
+        .padRadius(70);
+
+    var arcHover = d3.arc().outerRadius(radius - 35).innerRadius(35);
+    var arcClicked = d3.arc().outerRadius(radius - 30).innerRadius(35);
+
+    var arcs = g.selectAll('arc')
+        .data(data)
+        .enter()
+        .append('g')
+        .attr('class', 'arc')
+
+        
+        
+    var path = arcs.append('path')
+        .attr('fill', function(d, i)
+            {
+                return color(i);
+            })
+        .attr('d', arc);         
+
+    path.on('mouseenter', function(d) {
+        d3.select(this)
+            .attr('stroke', 'white')
+            .transition()
+            .duration(300)
+            .attr('d', arcHover)
+            .attr('stroke-width', 2)
+            .style('opacity', 0.5);
+
+            const label = d3.arc().outerRadius(radius).innerRadius(radius-100);
+            arcs.append('text')
+            .text(d => d.data.score)
+            .attr('transform', d => `translate(${label.centroid(d)})`)
+            .attr('font-size', '15px')
+            .attr('fill', 'rgb(206,206,206)')
+    })
+
+    .on('mouseleave', function(d) {
+        d3.select(this)
+            .transition()
+            .duration(300)
+            .attr('d', arc)
+            .attr('stroke', 'none')
+            .style('opacity', 1);
+
+            remove(arcs.text);
+            clicked = false;
+            
+    });
+    let clicked = false;
+    path.on('click', function(d) {
+        
+            d3.select(this)
+            .attr('stroke', 'white')
+            .transition()
+            .duration(300)
+            .attr('d', arcClicked)
+            .attr('stroke-width', 3)
+            .style('opacity', 0.4);
+            
+            
+            
+            clicked = !clicked;
+            console.log(clicked);
+    })
+
+            
+        
+    
+
+
+}
+}
+
+
+
+//initializing all graphs.
 getJoburgData();
 getNewYorkData();
+getInteractiveData();
