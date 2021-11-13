@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/nav.css">
+
+
+    <title>Data Visualization</title>
+    
+     <!--Meta-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Frano Steyn Student-2109231">
+    <meta name="description" content="This website tries to show which areas on the globe deserve more attention and help. The site also tries to create a bit more perspective.">
+    <meta name = "viewport" content = "user-scalable=no, width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <header>
+        <script>
+            const menuItemBlogs = [{title: 'BACK', link: '../theory/theory.html'}]
+                const initialiseMenu = () => {
+                    const nav = document.querySelector('nav');
+                    const ul = document.createElement('ul');
+                        for(let item of menuItemBlogs) {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.innerText = item.title;
+                            a.href = item.link;
+                            li.appendChild(a);
+                            ul.appendChild(li);
+                        }
+                    nav.appendChild(ul);
+                };
+            document.addEventListener('DOMContentLoaded', () => initialiseMenu());
+            </script>
+        <nav>
+        </nav>
+    </header>
+    <main>
+        <body>
+            <h1>INFORMATION IS BEAUTIFUL-INTERACTIVITY AS SEMIOTIC DEVICES</h1>  
+            <article>
+                <p>
+                    The data visualization that I shall be discussing in this blog post is World's Biggest 
+                    Data Breaches & Hacks 
+                    (https://informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/). 
+                    I will be focussing this analysis on how this infographic uses interactivity as a semiotic 
+                    device.
+                </p>
+                <p>
+                    First, I will discuss what I understand about what a semiotic device is. Semiotics refers 
+                    to the study of signs and symbols, in other words it is the study of how meaning is being 
+                    created. A device is described as being something that is made or adapted specifically for 
+                    some purpose. A semiotic device, as I understand it, is a system of some kind that is 
+                    specifically designed to create or support meaning with regards to signs or symbols.
+                </p>
+                <br>
+                <img class="infoBeautyImage" src = "../images/DataBreachInfoGraphic.png" 
+                alt = "Infographic showing cases of data breaches throughout history.">
+                <br>
+                <p>
+                    The above infographic consists of bubbles that represent the different data breaches, when 
+                    the user hovers their mouse over one of the bubbles it expands and displays more information 
+                    related to the topic of that bubble (as shown in the <i>Experian Brazil</i> bubble in the top 
+                    left corner of the image above).
+                </p>
+                <p>
+                    How does this simple interaction add meaning to the data? This interactive visualization system 
+                    allows the user to take their time going through the data that is being visualized. It allows 
+                    the user to pick the headings/topics that seem interesting to them personally. The system is 
+                    designed to make the bubbles feel like information holders, the bubbles are thus symbols of data 
+                    (they represent individual events of data breaches). The interaction here refers to the user taking 
+                    part in a dialogue with the infographic, this dialogue consists of the user asking the infographic 
+                    for more information about specific instances of data breaches.
+                </p>
+                <p>
+                    Ultimately, I believe that the semeiotics aspect here refers to the bubbles that represent pockets 
+                    of data, they are they symbolize events of data breaches. The device aspect refers to the 
+                    interaction system that is designed specifically to let the user view the different bubbles in detail 
+                    at their own pace. This is how the interaction acts as a semeiotic device.
+                </p>
+            </article>
+            <footer>
+                <p class = "h-card">
+                    <section class = "p-name">Franco Steyn</section>
+                    
+                    <section class = "p-postal-code">2194</section>
+                    
+                    <section class = "tel">071-612-8379</section>
+                    
+                    <a class = "e-mail" href = "2109231@students.wats.ac.za">2109231@students.wits.ac.za</a>
+                </p>
+              </footer>
+        </body>
+    </main>
+    
+</body>
+</html>

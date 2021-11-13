@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/nav.css">
+
+
+    <title>Data Visualization</title>
+    
+     <!--Meta-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Frano Steyn Student-2109231">
+    <meta name="description" content="This website tries to show which areas on the globe deserve more attention and help. The site also tries to create a bit more perspective.">
+    <meta name = "viewport" content = "user-scalable=no, width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <header>
+        <script>
+            const menuItemBlogs = [{title: 'BACK', link: '../theory/theory.html'}]
+                const initialiseMenu = () => {
+                    const nav = document.querySelector('nav');
+                    const ul = document.createElement('ul');
+                        for(let item of menuItemBlogs) {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.innerText = item.title;
+                            a.href = item.link;
+                            li.appendChild(a);
+                            ul.appendChild(li);
+                        }
+                    nav.appendChild(ul);
+                };
+            document.addEventListener('DOMContentLoaded', () => initialiseMenu());
+            </script>
+        <nav>
+        </nav>
+    </header>
+    <main>
+        <body>
+            <h1>REFLECTION ON DATA-DRIVEN ART</h1>  
+            <article>
+                <p>
+                    This blog post’s question was, “Critical reflection on the representation and 
+                    communication strategies you used in your Data-Driven Artwork. Explain what you 
+                    wanted to achieve and how you went about it.”, that being said; the brief for this 
+                    assignment didn’t require me to make any data-driven art. Thus, I have decided to 
+                    reflect on the data driven artwork that I have looked at in the previous blog post.
+                </p>
+                <p>
+                   <i> Every Playboy Centerfold, The Decades</i> (normalized) (2002), by Jason Salavon 
+                   is an art piece that was created by taking every Playboy centerfold over the decades 
+                   in order to make a mean average of the decade’s centerfolds. I will not be adding a 
+                   picture of this artwork seeing that I already did in the previous blog post.
+                </p>
+                <p>
+                    Jason used pixel manipulation and averaging in order to represent every Playboy 
+                    centerfold for the 1960’s, 1970’s, 1980’s, and the 1990’s. the strategy here was to 
+                    average out the colour pixels of the centerfolds in order to create an average centerfold 
+                    that would ultimately show how the models’ skin tone, hair colour, and body shape has 
+                    changed over the years (possibly due to audience taste changing). This strategy, as 
+                    explained in my previous blogpost, isn’t a new strategy seeing that it has been used 
+                    often in facial recognition software, according to Viégas and Wattenberg.
+                </p>
+                <p>
+                    Communication is a very important aspect of data visualization; thus, we can assume 
+                    that it is just as important for data-driven artwork. According to Riche et al. in Data 
+                    Driven Storytelling one great strategy for good communication is consistency. For this 
+                    particular art piece, we can see that Jason manipulated the colour pixels in such a way 
+                    that all of the Playboy centerfolds throughout the decades have a similar look and feel 
+                    to them. For instance, the backgrounds of the pictures are all a blueish shade. This 
+                    strategy results in models themselves standing out as well the changes in model type 
+                    across the decades.
+                </p>
+                <p>
+                    I believe that the point or commentary that Jason wanted to portray with this artwork 
+                    was that people’s taste in women have changed rapidly between the 1960’s and the 1990’s, 
+                    and that Playboy has picked their models accordingly. That being said I am can not 
+                    possibly know whether this speculation is true or not, it is just my interpretation of 
+                    the art. How Jason achieved this is by creating a mean average of the centerfolds while 
+                    manipulating the colours in order to make the backgrounds seem similar, putting more 
+                    emphasis on the differences between the averages between the four decades. To reiterate, 
+                    these are merely how I understand the artist’s work with regards to his goals  and 
+                    strategies.
+                </p>
+            </article>
+            <footer>
+                <p class = "h-card">
+                    <section class = "p-name">Franco Steyn</section>
+                    
+                    <section class = "p-postal-code">2194</section>
+                    
+                    <section class = "tel">071-612-8379</section>
+                    
+                    <a class = "e-mail" href = "2109231@students.wats.ac.za">2109231@students.wits.ac.za</a>
+                </p>
+              </footer>
+        </body>
+    </main>
+    
+</body>
+</html>

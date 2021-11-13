@@ -57,7 +57,7 @@ async function getJoburgData()
 
         svg
             .append('g')
-                .attr('fill', 'rgb(172, 110, 30)')
+                .attr('fill', 'rgb(93, 133, 138)')
                 .selectAll('rect')
                 .data(graphData.sort((a, b) => d3.descending(a.score, b.score)))
                 .join('rect')
@@ -106,7 +106,7 @@ async function getJoburgData()
 
         svg
             .append('g')
-                .attr('fill', 'rgb(172, 110, 30)')
+                .attr('fill', 'rgb(93, 133, 138)')
                 .selectAll('rect')
                 .data(graphData.sort((a, b) => d3.descending(a.score, b.score)))
                 .join('rect')
@@ -160,7 +160,7 @@ async function getJoburgData()
 
         svg
             .append('g')
-                .attr('fill', 'rgb(172, 110, 30)')
+                .attr('fill', 'rgb(93, 133, 138)')
                 .selectAll('rect')
                 .data(graphData.sort((a, b) => d3.descending(a.score, b.score)))
                 .join('rect')
@@ -241,8 +241,8 @@ async function getNewYorkData()
     var g = svg.append('g')
         .attr('transform', `translate(${width/2}, ${height/2})`)
 
-    var color = d3.scaleOrdinal(['#6e1a09','#96250e','#c43012','#c44712',
-    '#c45312','#c45c12','#c46b12','#c47412','#c48612'])
+    var color = d3.scaleOrdinal(['#2ec8db','#2cb6c7','#28a8b8','#28a8b8',
+    '#2295a3','#51a6b0','#5ba2ab','#60a0a8','#47777d'])
     
     
     var arc = d3.arc()
@@ -264,7 +264,8 @@ async function getNewYorkData()
             {
                 return color(i);
             })
-        .attr('d', arc);         
+        .attr('d', arc)
+        ;         
 
 
     const label = d3.arc().outerRadius(radius).innerRadius(radius-100);
@@ -290,8 +291,8 @@ else
     var g = svg.append('g')
         .attr('transform', `translate(${width/2-110}, ${height/2})`)
 
-    var color = d3.scaleOrdinal(['#c48612','#c47412','#c46b12',
-    '#c45c12','#c45312','#c44712','#c43012','#96250e','#6e1a09'])
+    var color = d3.scaleOrdinal(['#2ec8db','#2cb6c7','#28a8b8','#28a8b8',
+    '#2295a3','#51a6b0','#5ba2ab','#60a0a8','#47777d'])
     
     var arc = d3.arc()
         .innerRadius(0)
@@ -343,13 +344,14 @@ else
 
     //Sorting data for Dar Es Salaam    
     const graphDataDES = [ 
-        {id: 'd1', name: dataDES.categories[5].name, score: parseInt(dataDES.categories[5].score_out_of_10)},
+        
         {id: 'd2', name: dataDES.categories[1].name, score: parseInt(dataDES.categories[1].score_out_of_10)},
-        {id: 'd3', name: dataDES.categories[7].name, score: parseInt(dataDES.categories[7].score_out_of_10)},
-        {id: 'd4', name: dataDES.categories[0].name, score: parseInt(dataDES.categories[0].score_out_of_10)},
         {id: 'd5', name: dataDES.categories[8].name, score: parseInt(dataDES.categories[8].score_out_of_10)},
         {id: 'd6', name: dataDES.categories[13].name, score: parseInt(dataDES.categories[13].score_out_of_10)},
         {id: 'd7', name: dataDES.categories[14].name, score: parseInt(dataDES.categories[14].score_out_of_10)},
+        {id: 'd1', name: dataDES.categories[5].name, score: parseInt(dataDES.categories[5].score_out_of_10)},
+        {id: 'd3', name: dataDES.categories[7].name, score: parseInt(dataDES.categories[7].score_out_of_10)},
+        {id: 'd4', name: dataDES.categories[0].name, score: parseInt(dataDES.categories[0].score_out_of_10)},
         {id: 'd8', name: dataDES.categories[11].name, score: parseInt(dataDES.categories[11].score_out_of_10)},
         {id: 'd9', name: dataDES.categories[15].name, score: parseInt(dataDES.categories[15].score_out_of_10)},
     ]; 
@@ -368,8 +370,8 @@ else
     var g = svg.append('g')
         .attr('transform', `translate(${width/2}, ${height/2})`)
 
-    var color = d3.scaleOrdinal(['#6e1a09','#96250e','#c43012','#c44712',
-    '#c45312','#c45c12','#c46b12','#c47412','#c48612'])
+    var color = d3.scaleOrdinal(['#2ec8db','#2cb6c7','#28a8b8','#28a8b8',
+    '#2295a3','#51a6b0','#5ba2ab','#60a0a8','#47777d'])
     
     
     var arc = d3.arc()
@@ -405,12 +407,13 @@ else
             .attr('stroke-width', 2)
             .style('opacity', 0.5);
 
-            const label = d3.arc().outerRadius(radius).innerRadius(radius-100);
-            arcs.append('text')
-            .text(d => d.data.score)
-            .attr('transform', d => `translate(${label.centroid(d)})`)
-            .attr('font-size', '15px')
-            .attr('fill', 'rgb(206,206,206)')
+            const outerLabel = d3.arc().outerRadius(radius).innerRadius(radius-80);
+    arcs.append('text')
+    
+    .text(d => d.data.name)
+    .attr('transform', d => `translate(${outerLabel.centroid(d)})`)
+    .attr('font-size', '15px')
+    .attr('fill', 'white');
     })
 
     .on('mouseleave', function(d) {
@@ -420,12 +423,13 @@ else
             .attr('d', arc)
             .attr('stroke', 'none')
             .style('opacity', 1);
+    location.reload();
 
-            remove(arcs.text);
-            clicked = false;
+            
+            //clicked = false;
             
     });
-    let clicked = false;
+    /*let clicked = false;
     path.on('click', function(d) {
         
             d3.select(this)
@@ -440,13 +444,173 @@ else
             
             clicked = !clicked;
             console.log(clicked);
-    })
+    })*/
 
             
-        
+
+    const label = d3.arc().outerRadius(radius).innerRadius(radius-100);
+    arcs.append('text')
+    .text(d => d.data.score)
+    .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; })
+    .attr("dy", ".35em")
+    .style("text-anchor", "middle")
+    .attr('font-size', '15px')
+    .attr('fill', 'rgb(206,206,206)');
+
+    //Below was supposed to make a legend which I would have used for interactivity, but I wasn't able to fix it.
+
+   /*var legend = svg.append('g')
+        .attr('tranform', 'translate(500, 300)')
+        .selectAll('.legend')
+        .data(graphDataDES);
     
+        var Legend = legend.enter()
+        .append('g')
+        .classed('legend', true)
+        .attr('tranform', function(d, i) {
+            return 'translate(20,'+ (i+1)*30 +')';
+        });
+
+    Legend.append('rect')
+        .attr('width', 15)
+        .attr('height', 15)
+        .attr('fill', function(d, i)
+            {
+                return color(i);
+            });
+    
+    Legend.append('text')
+            .text(function(d){
+                return d.name;
+            })
+            .attr('fill', 'white')
+            .attr('x',15)
+            .attr('y',12);*/
 
 
+}
+else{
+//API request for Salaam
+const response = await fetch('https://api.teleport.org/api/urban_areas/slug:dar-es-salaam/scores/');
+const dataDES = await response.json();
+
+console.log('DES Data',dataDES.categories);
+
+//Sorting data for Dar Es Salaam    
+const graphDataDES = [ 
+    
+    {id: 'd2', name: dataDES.categories[1].name, score: parseInt(dataDES.categories[1].score_out_of_10)},
+    {id: 'd5', name: dataDES.categories[8].name, score: parseInt(dataDES.categories[8].score_out_of_10)},
+    {id: 'd6', name: dataDES.categories[13].name, score: parseInt(dataDES.categories[13].score_out_of_10)},
+    {id: 'd7', name: dataDES.categories[14].name, score: parseInt(dataDES.categories[14].score_out_of_10)},
+    {id: 'd1', name: dataDES.categories[5].name, score: parseInt(dataDES.categories[5].score_out_of_10)},
+    {id: 'd3', name: dataDES.categories[7].name, score: parseInt(dataDES.categories[7].score_out_of_10)},
+    {id: 'd4', name: dataDES.categories[0].name, score: parseInt(dataDES.categories[0].score_out_of_10)},
+    {id: 'd8', name: dataDES.categories[11].name, score: parseInt(dataDES.categories[11].score_out_of_10)},
+    {id: 'd9', name: dataDES.categories[15].name, score: parseInt(dataDES.categories[15].score_out_of_10)},
+]; 
+
+var data = d3.pie().sort(null).value(function(d){return d.score;})(graphDataDES);
+
+
+
+
+var svg = d3.select('#graph3'),
+
+        width = svg.attr('width'),
+        height = svg.attr('height'),
+        radius = Math.min(width, height)/2
+
+var g = svg.append('g')
+    .attr('transform', `translate(${width/2-110}, ${height/2})`)
+
+var color = d3.scaleOrdinal(['#2ec8db','#2cb6c7','#28a8b8','#28a8b8',
+'#2295a3','#51a6b0','#5ba2ab','#60a0a8','#47777d'])
+
+
+var arc = d3.arc()
+    .innerRadius(15)
+    .outerRadius(radius - 120)
+    .padAngle(.1)
+    .padRadius(70);
+
+var arcHover = d3.arc().outerRadius(radius - 95).innerRadius(20);
+//var arcClicked = d3.arc().outerRadius(radius - 30).innerRadius(35);
+
+var arcs = g.selectAll('arc')
+    .data(data)
+    .enter()
+    .append('g')
+    .attr('class', 'arc')
+
+    
+    
+var path = arcs.append('path')
+    .attr('fill', function(d, i)
+        {
+            return color(i);
+        })
+    .attr('d', arc);         
+
+path.on('mouseenter', function(d) {
+    d3.select(this)
+        
+        .transition()
+        .duration(300)
+        .attr('d', arcHover)
+        .attr('stroke-width', 2)
+        .attr('stroke', 'white')
+        .style('opacity', 0.5);
+
+        const outerLabel = d3.arc().outerRadius(radius-120).innerRadius(radius-100);
+arcs.append('text')
+
+.text(d => d.data.name)
+.attr('transform', d => `translate(${outerLabel.centroid(d)})`)
+.attr('font-size', '12px')
+.attr('fill', 'white');
+})
+
+.on('mouseleave', function(d) {
+    d3.select(this)
+        .transition()
+        .duration(300)
+        .attr('d', arc)
+        .attr('stroke', 'none')
+        .style('opacity', 1);
+location.reload();
+
+        
+        //clicked = false;
+        
+});
+/*let clicked = false;
+path.on('click', function(d) {
+    
+        d3.select(this)
+        .attr('stroke', 'white')
+        .transition()
+        .duration(300)
+        .attr('d', arcClicked)
+        .attr('stroke-width', 3)
+        .style('opacity', 0.4);
+        
+        
+        
+        clicked = !clicked;
+        console.log(clicked);
+})*/
+
+        
+
+const label = d3.arc().outerRadius(radius).innerRadius(radius-100);
+arcs.append('text')
+.text(d => d.data.score)
+.attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; })
+.attr("dy", ".35em")
+.style("text-anchor", "middle")
+.attr('font-size', '15px')
+.attr('fill', 'rgb(206,206,206)');
 }
 }
 

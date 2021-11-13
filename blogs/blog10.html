@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/nav.css">
+
+
+    <title>Data Visualization</title>
+    
+     <!--Meta-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Frano Steyn Student-2109231">
+    <meta name="description" content="This website tries to show which areas on the globe deserve more attention and help. The site also tries to create a bit more perspective.">
+    <meta name = "viewport" content = "user-scalable=no, width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <header>
+        <script>
+            const menuItemBlogs = [{title: 'BACK', link: '../theory/theory.html'}]
+                const initialiseMenu = () => {
+                    const nav = document.querySelector('nav');
+                    const ul = document.createElement('ul');
+                        for(let item of menuItemBlogs) {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.innerText = item.title;
+                            a.href = item.link;
+                            li.appendChild(a);
+                            ul.appendChild(li);
+                        }
+                    nav.appendChild(ul);
+                };
+            document.addEventListener('DOMContentLoaded', () => initialiseMenu());
+            </script>
+        <nav>
+        </nav>
+    </header>
+    <main>
+        <body>
+            <h1>MY REPRESENTATION AND COMMUNICATION STRATEGIES</h1>  
+            <article>
+                <p>
+                    The data visualization that I have decided to make interactive is my pie chart. My strategy 
+                    for doing this is adding more data sets that the user can choose from, allowing the user to 
+                    view a pie chart representing the different qualities of living in the city of their 
+                    choosing. I have chosen to communicate the data sets through a pie chart since pie charts 
+                    are simple and easy to understand in my opinion. The chart will clearly represent the score 
+                    of each quality of living aspect of the different cities. The user will be able to switch 
+                    between the cities using buttons seeing that this is the simplest way I could think of to 
+                    create this interaction. This was however the original idea, adly I could not get it to 
+                    work. Thus I settled for letting the user hover over the pie chart to make the legend appear.
+                </p>
+                <P>
+                    Riche et al. in their book, <i>Data Driven Storytelling</i>, chapter 9 explains some strategies and 
+                    good practices for communicating data to audiences. One of these good practices or strategies is having 
+                    a consistent design approach, which refers to having a consistent style so that audiences or users to 
+                    relate in a sense to the work which could encourage them to return. This consistent style refers to fonts, 
+                    colours, layout, and types of interaction (Riche et al., 2018; pp. 219-220). This stood out to me and 
+                    helped me focus my designs towards a single style and colour scheme. I will continue to do this in order 
+                    to keep communication with users clear.
+                </P>
+                <p>
+                    Evanthia Dimara, and Charles Perin in their paper, <i>What is Interaction for Data Visualization</i>, 
+                    describe one aspect of good interaction that they have found through their research. This aspect is simple 
+                    interaction over minimal information. They also state that good interaction is direct and simple in order 
+                    to improve the user’s understanding of the data that is being represented (Dimara and Perin, 2020). What I 
+                    understand by this is that when designing interaction with regards to data visualization one must keep in 
+                    mind that overstimulating the user with too much power in terms of interaction or an over-abundance of 
+                    information that will leave the user overwhelmed. It is for this reason why I focused my strategy of 
+                    designing my interaction and communication on keeping everything simple and clear. This goes hand in 
+                    hand I believe seeing that decreasing the amount or depth of you information would allow you to focus 
+                    more on how the left over data (so to speak) is going to be represented. 
+                </p>
+                <p>
+                    Ultimately, I’m not going to give the user too much different interactions that might distract or 
+                    overwhelm them, this allowed me to focus on simple representation of my data (each pie chart segment 
+                    represents an aspect of the quality of life in Dar Es Salaam). The data set that I have chosen from the start have already been filtered by myself 
+                    before implementing them into the data visualizations. The reason that I decided to do this was to 
+                    simplify the visualizations and ensure that the amount of data that is being represented isn’t overwhelming 
+                    and that the graphs aren’t littered with data that is mundane and uninteresting, thus creating simple but effective communication and representation.
+                </p>
+            </article>
+            <footer>
+                <p class = "h-card">
+                    <section class = "p-name">Franco Steyn</section>
+                    
+                    <section class = "p-postal-code">2194</section>
+                    
+                    <section class = "tel">071-612-8379</section>
+                    
+                    <a class = "e-mail" href = "2109231@students.wats.ac.za">2109231@students.wits.ac.za</a>
+                </p>
+              </footer>
+        </body>
+    </main>
+    
+</body>
+</html>

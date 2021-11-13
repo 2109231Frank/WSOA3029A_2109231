@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/nav.css">
+
+
+    <title>Data Visualization</title>
+    
+     <!--Meta-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Frano Steyn Student-2109231">
+    <meta name="description" content="This website tries to show which areas on the globe deserve more attention and help. The site also tries to create a bit more perspective.">
+    <meta name = "viewport" content = "user-scalable=no, width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <header>
+        <script>
+            const menuItemBlogs = [{title: 'BACK', link: '../theory/theory.html'}]
+                const initialiseMenu = () => {
+                    const nav = document.querySelector('nav');
+                    const ul = document.createElement('ul');
+                        for(let item of menuItemBlogs) {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.innerText = item.title;
+                            a.href = item.link;
+                            li.appendChild(a);
+                            ul.appendChild(li);
+                        }
+                    nav.appendChild(ul);
+                };
+            document.addEventListener('DOMContentLoaded', () => initialiseMenu());
+            </script>
+        <nav>
+        </nav>
+    </header>
+    <main>
+        <body>
+            <h1>ARTISTIC DATA VISUALIZATION: BEYOND VISUAL ANALYTICS</h1>  
+            <article>
+                <p>
+                    This blog post is a close reading and reflection on Fernanda B. Viégas and Martin 
+                    Wattenberg’s paper, Artistic Data Visualization: Beyond Visual Analytics (2007). 
+                    This paper looks at the field of information visualization and how the ability to 
+                    create data visualizations at home have changed the field from being strictly scientific 
+                    to being artistic in a sense.
+                </p>
+                <p>
+                    They first take on the task of defining what can be regarded as artistic data 
+                    visualization. This task is an immensely difficult one in on itself seeing that 
+                    in order to define exactly what artistic data visualization is one must define what 
+                    art is. Viégas and Wattenberg simplified this task by giving a brief definition of what 
+                    artistic data visualization is with regards to their paper, and this working definition 
+                    is that artistic data visualizations are visualizations created by artists with the 
+                    purpose of creating art. Along with this definition Viégas and Wattenberg have devised 
+                    a few conditions for what can be considered artistic data visualization: the artworks 
+                    must be based on actual data, unlike some artists like Simon Patterson who used 
+                    diagrammatic imagery as a base for his artworks, Great Bear and J.P.233 in C.S.O. 
+                    Blue. According to Viégas and Wattenberg this is not data visualization since there 
+                    is no mapping between data and image. The second condition is that beautiful scientific 
+                    visualizations can not be considered artistic data visualization seeing that they do not 
+                    align with the working definition that Viégas and Wattenberg have created 
+                    (Viégas and Wattenberg, 2007).
+                </p>
+                <p>
+                    Viégas and Wattenberg provide descriptions of four examples of artistic data 
+                    visualization in order to aid in the understanding of the issue raised by artistic 
+                    data visualization. These examples were chosen for the purpose of highlighting the a 
+                    few of the central qualities of artistic visualization (Viégas and Wattenberg, 2007).
+                </p>
+                <p>
+                    All four of these examples share a characteristic according to Viégas and Wattenberg, 
+                    which is that they all embody a forceful point of view. The artists responsible for the 
+                    examples have committed various visual analytic sins while creating their visualizations. 
+                    These so called sins refer to the artists exploiting various mechanisms, pitfalls, or 
+                    distortions in order to manipulate audiences towards a certain point of view or 
+                    conclusion. These artistic visualizations get their power from the artist’s 
+                    understanding of visualization with regards to portraying a certain point of view. 
+                    This is vastly different from traditional or scientific visualizations seeing that 
+                    traditional visualizations avoid or minimize distortions in order to keep the data 
+                    analysis unbiased and dispassionate. Viégas and Wattenberg point out that this might 
+                    be misguided seeing that it isn’t possible to create a visualization that is completely 
+                    neutral. Viégas and Wattenberg propose a possible solution to this dilemma: they state 
+                    that visualization designers should choose an appropriate point of view and make it known 
+                    rather than avoiding a point of view all together (Viégas and Wattenberg, 2007).
+                </p>
+                <p>
+                    Ultimately, what I took from this paper is that we can learn a thing or two from artistic 
+                    visualization. It shows us that visualization can be used to analyse or express a specific 
+                    point of view and that avoiding this is not the way to go about designing visualization, 
+                    as a designer you should rather understand your bias or choose an appropriate point for 
+                    the visualizations that you are creating. The main question that I found throughout this 
+                    paper is: should data visualization focus on neutral analysis of data or should designers 
+                    explore ways to use visualization in order to support or share a certain point of view.
+                </p>
+            </article>
+            <footer>
+                <p class = "h-card">
+                    <section class = "p-name">Franco Steyn</section>
+                    
+                    <section class = "p-postal-code">2194</section>
+                    
+                    <section class = "tel">071-612-8379</section>
+                    
+                    <a class = "e-mail" href = "2109231@students.wats.ac.za">2109231@students.wits.ac.za</a>
+                </p>
+              </footer>
+        </body>
+    </main>
+    
+</body>
+</html>

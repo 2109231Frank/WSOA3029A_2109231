@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/nav.css">
+
+
+    <title>Data Visualization</title>
+    
+     <!--Meta-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Frano Steyn Student-2109231">
+    <meta name="description" content="This website tries to show which areas on the globe deserve more attention and help. The site also tries to create a bit more perspective.">
+    <meta name = "viewport" content = "user-scalable=no, width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <header>
+        <script>
+            const menuItemBlogs = [{title: 'BACK', link: '../theory/theory.html'}]
+                const initialiseMenu = () => {
+                    const nav = document.querySelector('nav');
+                    const ul = document.createElement('ul');
+                        for(let item of menuItemBlogs) {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.innerText = item.title;
+                            a.href = item.link;
+                            li.appendChild(a);
+                            ul.appendChild(li);
+                        }
+                    nav.appendChild(ul);
+                };
+            document.addEventListener('DOMContentLoaded', () => initialiseMenu());
+            </script>
+        <nav>
+        </nav>
+    </header>
+    <main>
+        <body>
+            <h1>WHAT IS INTERACTION FOR DATA VISUALIZATION?</h1>  
+            <article>
+                <p>
+                    In <i>What is Interaction for Data Visualization</i> Evanthia Dimara and Charles Perin attempt 
+                    to clear the confusion with what “interaction” means with regards to data visualization. 
+                    Dimara and Perin suggest that this confusion is caused by a lack of consensual definition. 
+                    The goal of their reading is to improve the understanding of interaction within data 
+                    visualization in order to enrich interactive design practices within data visualization 
+                    (Dimara and Perin, 2020).
+                </p>
+                <p>
+                    Through research and collaboration Dimara and Perin have derived what the initial understanding 
+                    of interaction within visualization. From the research they have found mandatory components of 
+                    interaction. These components are external and internal entities and actions. The internal entity 
+                    of interaction is the intent behind the data which is identified at a low level (alter the 
+                    representation of data) and a higher level (information seeking, sensemaking, and knowledge 
+                    acquisition/creation). The external entities were found to be the user (the human being interacting 
+                    with the visualization) and the data (the information source that is the main interest of the user). 
+                    The external actions refer to the user performing an action on the visualization system and that 
+                    system returns a reaction in the form of “permutation of graphical marks, change of transformation 
+                    parameters, and alteration of the pipeline”. The internal actions refer to the user performing 
+                    cognitive acts or performing a reasoning process on the data in order to interact with the 
+                    visualization. The above mentioned components of interactivity are not the only components that 
+                    interactivity can include, but are mandatory for interactivity, I will however not be going through 
+                    the possible extra internal and external entities and actions (Dimara and Perin, 2020).
+                </p>
+                <p>
+                    Through research and collaboration Dimara and Perin have derived what the initial 
+                    understanding of interaction within visualization. From the research they have found 
+                    mandatory components of interaction. These components are external and internal entities 
+                    and actions. The internal entity of interaction is the intent behind the data which is 
+                    identified at a low level (alter the representation of data) and a higher level 
+                    (information seeking, sensemaking, and knowledge acquisition/creation). The external 
+                    entities were found to be the user (the human being interacting with the visualization) 
+                    and the data (the information source that is the main interest of the user). The external 
+                    actions refer to the user performing an action on the visualization system and that 
+                    system returns a reaction in the form of “permutation of graphical marks, change of 
+                    transformation parameters, and alteration of the pipeline”. The internal actions refer 
+                    to the user performing cognitive acts or performing a reasoning process on the data in 
+                    order to interact with the visualization. The above mentioned components of interactivity 
+                    are not the only components that interactivity can include, but are mandatory for 
+                    interactivity, I will however not be going through the possible extra internal and 
+                    external entities and actions (Dimara and Perin, 2020).
+                </p>
+                <p>
+                    Dimara and Perin also researched the different benefits and critiques surrounding 
+                    interaction. The benefits are that interaction increases the human ability to explore 
+                    and understand data. The critiques pointed out that research efforts often consider 
+                    interaction an afterthought rather than focusing on it in comparison to data representation 
+                    (Dimara and Perin, 2020).
+                </p>
+                <p>
+                    Ultimately in the visualization field interactivity refers to the dialogue between user 
+                    and visualization system over a central object of interest (data that is being visualized 
+                    in this case). This is however, not universally agreed upon and thus Dimara and Perin 
+                    decided to look at what interaction means within the HCI field (Human-Computer Interaction). 
+                    Interaction within HCI is also considered to be a dialogue between user and computer, however 
+                    in HCI there are more properties that are seen as important for interaction, such as: 
+                    simplicity with minimal information, user experience, and user embodiment 
+                    (Dimara and Perin, 2020).
+                </p>
+                <p>
+                    Ultimately through research and consideration, Dimara and Perin have created their own 
+                    definition of interaction within visualization: “Interaction for visualization is the 
+                    interplay between a person and a data interface involving a data-related intent, at 
+                    least one action from the person and an interface reaction that is perceived as such” 
+                    (Dimara and Perin, 2020; p. 8).
+                </p>
+            </article>
+            <footer>
+                <p class = "h-card">
+                    <section class = "p-name">Franco Steyn</section>
+                    
+                    <section class = "p-postal-code">2194</section>
+                    
+                    <section class = "tel">071-612-8379</section>
+                    
+                    <a class = "e-mail" href = "2109231@students.wats.ac.za">2109231@students.wits.ac.za</a>
+                </p>
+              </footer>
+        </body>
+    </main>
+    
+</body>
+</html>

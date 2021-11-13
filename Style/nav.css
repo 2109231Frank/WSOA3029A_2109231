@@ -6,7 +6,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     height: 13vh;
-    background-color: rgb(172, 110, 30);
+    background-color: rgb(93, 133, 138);
     font-family: 'Exo 2',sans-serif;
     width: 100%;
     top: 0%;
@@ -22,6 +22,7 @@ nav a{
     font-weight: bold;
     font-size: 20px;
     padding-right: 3vh;
+    transition: 200ms;
 }
 
 nav ul{
@@ -37,6 +38,7 @@ nav ul{
 nav a:hover{
     
     font-size: 40px;
+    transition: 200ms;
 }
 
 @media screen and (max-width:800px){
@@ -53,6 +55,7 @@ nav a:hover{
    nav a{
        font-size: 20px;
        padding-right: 1vh;
+       transition: 200ms;
    }
    
 }   

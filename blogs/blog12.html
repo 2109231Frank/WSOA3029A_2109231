@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/nav.css">
+
+
+    <title>Data Visualization</title>
+    
+     <!--Meta-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Frano Steyn Student-2109231">
+    <meta name="description" content="This website tries to show which areas on the globe deserve more attention and help. The site also tries to create a bit more perspective.">
+    <meta name = "viewport" content = "user-scalable=no, width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <header>
+        <script>
+            const menuItemBlogs = [{title: 'BACK', link: '../theory/theory.html'}]
+                const initialiseMenu = () => {
+                    const nav = document.querySelector('nav');
+                    const ul = document.createElement('ul');
+                        for(let item of menuItemBlogs) {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.innerText = item.title;
+                            a.href = item.link;
+                            li.appendChild(a);
+                            ul.appendChild(li);
+                        }
+                    nav.appendChild(ul);
+                };
+            document.addEventListener('DOMContentLoaded', () => initialiseMenu());
+            </script>
+        <nav>
+        </nav>
+    </header>
+    <main>
+        <body>
+            <h1>ANALYSIS OF DATA-DRIVEN ARTWORK</h1>  
+            <article>
+                <p>
+                    The data driven art that I will be looking at in this blog post is Every Playboy 
+                    Centerfold, The Decades (normalized) (2002) by Jason Salavon. 
+                </p>
+                <br>
+                <img class="blogImage" src = "../images/EveryPlayboyCenterfold.jpg" 
+                alt = "Infographic showing cases of data breaches throughout history.">
+                <br>
+                <p>
+                    The above image is the data driven art by Jason Salavon and is labelled 1960’s to 1990’s 
+                    from left to right. According to Jason Salavon’s own website he describes that the 
+                    photographs used in the art piece are the result of overlaying the mean average of 
+                    Playboy’s centerfolds throughout the decades between the 1960’s and the 1990’s.
+                </p>
+                <p>
+                    The artistic strategy that Jason has incorporated was averaging the colour pixels in each 
+                    decade making it seem like the Playboy models’ skin tones become lighter as well as their 
+                    hair colour. Ultimately showing how audience taste has changed over the years. This 
+                    strategy isn’t too unique as explained by Viégas and Wattenberg in their paper, Artistic 
+                    Data Visualization: Beyond Visual Analytics, where they explain that this strategy is 
+                    often used in facial recognition algorithms. Jason has manipulated the colour pixels in 
+                    the images and rearranged them to create meaning.
+                </p>
+                <p>
+                    The meaning that Jason created through manipulating the mean average of Playboy’s 
+                    centerfolds is that Playboy’s audience’s taste has changed over the decades to preference 
+                    women with blonder hair, lighter skin tones, and thinner figures. What stands out the 
+                    most to me about this project is how Jason managed to turn hundreds of unique models into 
+                    and average blurry model, I can not say what Jason wanted to portray with this project 
+                    and thus these points are merely speculation.
+                </p>
+                <p>
+                    In full, I think that through Jason’s artistic strategy led to his project created the 
+                    meaning that through the decades Playboy’s ideal model have become slimmer, whiter, and 
+                    blonder. Why Jason thought that this was important is lost on me, but I do find how he 
+                    portrayed this to be interesting.
+                </p>
+            </article>
+            <footer>
+                <p class = "h-card">
+                    <section class = "p-name">Franco Steyn</section>
+                    
+                    <section class = "p-postal-code">2194</section>
+                    
+                    <section class = "tel">071-612-8379</section>
+                    
+                    <a class = "e-mail" href = "2109231@students.wats.ac.za">2109231@students.wits.ac.za</a>
+                </p>
+              </footer>
+        </body>
+    </main>
+    
+</body>
+</html>
