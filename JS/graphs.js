@@ -6,7 +6,7 @@ async function getJoburgData()
     const response = await fetch('https://api.teleport.org/api/urban_areas/slug:johannesburg/scores/');
     const dataJB = await response.json();
     
-    console.log('Joburg Data',dataJB.categories);
+    
 
     //Sorting data for D3
     console.log(d3);
@@ -30,7 +30,7 @@ async function getJoburgData()
         //{name: dataJB.categories[16].name, score: parseInt(dataJB.categories[16].score_out_of_10)}, 
     ];   
     
-
+    console.log('Joburg Data',graphData);
     console.log(window.screen.width)
 
     //Normal laptop screen graph.
@@ -614,9 +614,294 @@ arcs.append('text')
 }
 }
 
+                    //INITIAL DATA DRIVEN ART ATTEMPT.
+//Data Driven Art
+/*async function getArtData()
+{
+    const response = await fetch('https://api.teleport.org/api/urban_areas/slug:johannesburg/scores/');
+    const dataArt = await response.json(); 
 
+var graphData = [
+    {name: dataArt.categories[0].name, score: (parseInt(dataArt.categories[0].score_out_of_10)-2)},
+];
+console.log('ART DATA', graphData);
+
+const svg = d3.select('#graph4')
+const width = 650;
+const height = 1000;
+const margin = {top: 20, bottom: 20, left: 120, right: 20};
+const innerHeight = height - margin.top - margin.bottom;
+const innerWidth = width - margin.left - margin.right;
+const color = d3.scaleLinear(['#630000','#a10000','#c40000','#ff0000','#8a0087','#140099']);
+const xScale = d3.scaleLinear()
+    .domain([0, 10])
+    .range([0, innerWidth]);
+const yScale = d3.scaleBand()
+        .domain(graphData.map(d => d.name))
+        .range([0, innerHeight]);
+const yAxis = d3.axisLeft(yScale);
+const g = svg.append('g')
+g.selectAll('rect')
+.data(graphData)
+.enter()
+.append('rect')
+.attr('y', d => yScale(d.name))
+.attr('width', 50)
+.attr('height', 50)
+};*/
+//getArtData();
+
+async function getAucklandData()
+{ if(window.screen.width > 430)
+    {
+    //API request
+    const response = await fetch('https://api.teleport.org/api/urban_areas/slug:auckland/scores/');
+    const dataAuck = await response.json();
+    //Sorting data for D3    
+    var graphData = [ 
+        {name: dataAuck.categories[5].name, score: parseInt(dataAuck.categories[5].score_out_of_10)},
+        {name: dataAuck.categories[1].name, score: parseInt(dataAuck.categories[1].score_out_of_10)},
+        {name: dataAuck.categories[2].name, score: parseInt(dataAuck.categories[2].score_out_of_10)},
+        {name: dataAuck.categories[7].name, score: parseInt(dataAuck.categories[7].score_out_of_10)},
+        {name: dataAuck.categories[6].name, score: parseInt(dataAuck.categories[6].score_out_of_10)},
+        {name: dataAuck.categories[0].name, score: parseInt(dataAuck.categories[0].score_out_of_10)},
+        {name: dataAuck.categories[8].name, score: parseInt(dataAuck.categories[8].score_out_of_10)},
+        {name: dataAuck.categories[9].name, score: parseInt(dataAuck.categories[9].score_out_of_10)},
+        {name: dataAuck.categories[10].name, score: parseInt(dataAuck.categories[10].score_out_of_10)},
+        {name: dataAuck.categories[11].name, score: parseInt(dataAuck.categories[11].score_out_of_10)},
+        {name: dataAuck.categories[12].name, score: parseInt(dataAuck.categories[12].score_out_of_10)},
+        {name: dataAuck.categories[13].name, score: parseInt(dataAuck.categories[13].score_out_of_10)},
+        {name: dataAuck.categories[14].name, score: parseInt(dataAuck.categories[14].score_out_of_10)},
+        {name: dataAuck.categories[15].name, score: parseInt(dataAuck.categories[15].score_out_of_10)},
+        {name: dataAuck.categories[16].name, score: parseInt(dataAuck.categories[16].score_out_of_10)},
+        {name: dataAuck.categories[4].name, score: parseInt(dataAuck.categories[4].score_out_of_10)},
+        {name: dataAuck.categories[3].name, score: parseInt(dataAuck.categories[3].score_out_of_10)},
+    ];   console.log('AUCKLAND Data',graphData);
+
+   
+var width = 650;
+var height = 650;
+var color = d3.scaleOrdinal(['#2ec8db','#2cb6c7','#28a8b8','#28a8b8',
+'#2295a3','#51a6b0','#5ba2ab','#60a0a8','#47777d']);
+const chart = graphData => d3.pack()
+    .size([width, height])
+    .padding(5)(d3.hierarchy({children: graphData})
+    .sum(d => d.score));
+
+const svg = d3.select('#graph4')
+    .style('width', width)
+    .style('height', height);
+    
+    
+const root = chart(graphData);
+
+
+
+const node = svg.selectAll()
+    .data(root.children)
+    .enter()
+    .append('g')
+    .attr('transform', `translate(0,0)`)
+    .style('stroke', 'rgb(206, 206, 206)')
+    .attr('stroke-width', 1.5 );
+    
+            
+const circle = node.append('circle')
+    .style('fill', color)
+    .on('mouseover', function() {
+        d3.select(this)
+        .style('stroke', 'rgb(206, 206, 206)')
+        .attr('stroke-width', 3)
+        .attr('r', d => d.r + 10) 
+        circleLabelName.style('opacity', 1)
+        circleLabelScore.style('opacity', 1)   
+        })
+    .on('mouseout', function () {
+        d3.select(this)
+        .attr('stroke-width', 4 )
+        .attr('r', d => d.r)
+        circleLabelName.style('opacity', 0)
+        circleLabelScore.style('opacity', 0)
+});
+    
+const circleLabelName = node.append('text')
+    .attr('transform', 'translate(-30, 0)')
+    .text(d => d.data.name)
+    .style('fill', 'rgb(206, 206, 206)')
+    .style('opacity', 0)
+    .style('stroke', 'none')
+    .style('font-size', 15)
+
+const circleLabelScore = node.append('text')
+    .attr('transform', 'translate(0, 20)') 
+    .text(d => d.data.score)
+    .style('fill', 'rgb(206, 206, 206)')
+    .style('opacity', 0)
+    .style('stroke', 'none')
+    .style('font-size', 15)
+    
+    node.transition()
+        .ease(d3.easeExpInOut)
+        .duration(2000)
+        .attr('transform', d => `translate(${d.x}, ${d.y})`);
+    
+    circle.transition()
+        .ease(d3.easeExpInOut)
+        .duration(2000)
+        .attr('r', (d => d.r-15))
+
+
+    //ATEMPT AT MAKING DRAG
+        
+        /*drag = {
+
+  function dragstarted(event, d) {
+    d3.select(this).raise()
+    .style("opacity", 0.5);
+  }
+
+  function dragged(event, d) {
+    d3.select(this)
+    .attr("cx", d.x = event.x)
+    .attr("cy", d.y = event.y);
+  }
+
+  function dragended(event, d) {
+    d3.select(this)
+    .style("opacity", 1);
+  }
+
+  return d3.drag()
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended);
+}*/
+        
+        //ATTEMPT AT CREATING CENTER GRAVITY FOR FINAL CHART
+    /*var force = d3.forceSimulation()
+        .velocityDecay(0.8)
+        .alphaDecay(0)
+        .force('collision', d3.forceCollide(d => d.r).strength(1))
+
+        
+    force.on('tick', function(){
+        svg.selectAll('circle')
+        .attr('cx', function(d) {return d.x;})
+        .attr('cy', function(d) {return d.y;})
+    })
+
+    function generateForce(){
+        force.force('charge', d3.forceManyBody().strength(5));
+        force.force('x', d3.forceX(width/2));
+        force.force('y', d3.forceX(height/2));
+        force.restart();
+        
+    }
+    generateForce()*/
+
+}
+else{
+    
+    //API request
+    const response = await fetch('https://api.teleport.org/api/urban_areas/slug:auckland/scores/');
+    const dataAuck = await response.json();
+    //Sorting data for D3    
+    var graphData = [ 
+        {name: dataAuck.categories[5].name, score: parseInt(dataAuck.categories[5].score_out_of_10)},
+        {name: dataAuck.categories[1].name, score: parseInt(dataAuck.categories[1].score_out_of_10)},
+        {name: dataAuck.categories[2].name, score: parseInt(dataAuck.categories[2].score_out_of_10)},
+        {name: dataAuck.categories[7].name, score: parseInt(dataAuck.categories[7].score_out_of_10)},
+        {name: dataAuck.categories[6].name, score: parseInt(dataAuck.categories[6].score_out_of_10)},
+        {name: dataAuck.categories[0].name, score: parseInt(dataAuck.categories[0].score_out_of_10)},
+        {name: dataAuck.categories[8].name, score: parseInt(dataAuck.categories[8].score_out_of_10)},
+        {name: dataAuck.categories[9].name, score: parseInt(dataAuck.categories[9].score_out_of_10)},
+        {name: dataAuck.categories[10].name, score: parseInt(dataAuck.categories[10].score_out_of_10)},
+        {name: dataAuck.categories[11].name, score: parseInt(dataAuck.categories[11].score_out_of_10)},
+        {name: dataAuck.categories[12].name, score: parseInt(dataAuck.categories[12].score_out_of_10)},
+        {name: dataAuck.categories[13].name, score: parseInt(dataAuck.categories[13].score_out_of_10)},
+        {name: dataAuck.categories[14].name, score: parseInt(dataAuck.categories[14].score_out_of_10)},
+        {name: dataAuck.categories[15].name, score: parseInt(dataAuck.categories[15].score_out_of_10)},
+        {name: dataAuck.categories[16].name, score: parseInt(dataAuck.categories[16].score_out_of_10)},
+        {name: dataAuck.categories[4].name, score: parseInt(dataAuck.categories[4].score_out_of_10)},
+        {name: dataAuck.categories[3].name, score: parseInt(dataAuck.categories[3].score_out_of_10)},
+    ];   console.log('AUCKLAND Data',graphData);
+
+   
+var width = 400;
+var height = 400;
+var color = d3.scaleOrdinal(['#2ec8db','#2cb6c7','#28a8b8','#28a8b8',
+'#2295a3','#51a6b0','#5ba2ab','#60a0a8','#47777d']);
+const chart = graphData => d3.pack()
+    .size([width, height])
+    .padding(5)(d3.hierarchy({children: graphData})
+    .sum(d => d.score));
+
+const svg = d3.select('#graph4')
+    .style('width', width)
+    .style('height', height);
+    
+    
+const root = chart(graphData);
+
+
+
+const node = svg.selectAll()
+    .data(root.children)
+    .enter()
+    .append('g')
+    .attr('transform', `translate(0,0)`)
+    .style('stroke', 'rgb(206, 206, 206)')
+    .attr('stroke-width', 1.5 );
+    
+            
+const circle = node.append('circle')
+    .style('fill', color)
+    .on('mouseover', function() {
+        d3.select(this)
+        .style('stroke', 'rgb(206, 206, 206)')
+        .attr('stroke-width', 3)
+        .attr('r', d => d.r + 10) 
+        circleLabelName.style('opacity', 1)
+        circleLabelScore.style('opacity', 1)   
+        })
+    .on('mouseout', function () {
+        d3.select(this)
+        .attr('stroke-width', 4 )
+        .attr('r', d => d.r)
+        circleLabelName.style('opacity', 0)
+        circleLabelScore.style('opacity', 0)
+});
+    
+const circleLabelName = node.append('text')
+    .attr('transform', 'translate(-30, 0)')
+    .text(d => d.data.name)
+    .style('fill', 'rgb(206, 206, 206)')
+    .style('opacity', 0)
+    .style('stroke', 'none')
+    .style('font-size', 12)
+
+const circleLabelScore = node.append('text')
+    .attr('transform', 'translate(0, 20)') 
+    .text(d => d.data.score)
+    .style('fill', 'rgb(206, 206, 206)')
+    .style('opacity', 0)
+    .style('stroke', 'none')
+    .style('font-size', 12)
+    
+    node.transition()
+        .ease(d3.easeExpInOut)
+        .duration(2000)
+        .attr('transform', d => `translate(${d.x}, ${d.y})`);
+    
+    circle.transition()
+        .ease(d3.easeExpInOut)
+        .duration(2000)
+        .attr('r', (d => d.r-8))
+}
+}
 
 //initializing all graphs.
+getAucklandData();
 getJoburgData();
 getNewYorkData();
 getInteractiveData();

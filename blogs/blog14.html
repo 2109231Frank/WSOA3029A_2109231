@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/nav.css">
+
+
+    <title>Data Visualization</title>
+    
+     <!--Meta-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Frano Steyn Student-2109231">
+    <meta name="description" content="This website tries to show which areas on the globe deserve more attention and help. The site also tries to create a bit more perspective.">
+    <meta name = "viewport" content = "user-scalable=no, width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <header>
+        <script>
+            const menuItemBlogs = [{title: 'BACK', link: '../theory/theory.html'}]
+                const initialiseMenu = () => {
+                    const nav = document.querySelector('nav');
+                    const ul = document.createElement('ul');
+                        for(let item of menuItemBlogs) {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.innerText = item.title;
+                            a.href = item.link;
+                            li.appendChild(a);
+                            ul.appendChild(li);
+                        }
+                    nav.appendChild(ul);
+                };
+            document.addEventListener('DOMContentLoaded', () => initialiseMenu());
+            </script>
+        <nav>
+        </nav>
+    </header>
+    <main>
+        <body>
+            <h1>REFLECTION ON MY DATA-DRIVEN ART</h1>  
+            <article>
+                <p>
+                    For my data driven artwork I decided to take my data set, which presents the quality 
+                    of life in Johannesburg by giving certain aspects of life a score out of 10. I gave 
+                    each of these aspects a specific colour depending on their score. Everything above 5 
+                    had a shade of blue because I believe that blue represents calmness, safety, and health. 
+                    All the aspects with a score of 4 and below had a shade of red, seeing that red for me 
+                    represents fire, anger, and danger. The aspects that have a score of 5 was purple, which 
+                    is a mix between blue and red thus making it a good “middle-ground” colour.
+                </p>
+                <p>
+                    I decided to change some of the aspects’ scores because I don’t agree with a few of 
+                    them. For instance, Diepsloot, Alexandria and Soweto are part of Johannesburg, and these 
+                    areas (apart from Soweto mostly) are known to be plagued by assault, rape, mugging, and 
+                    other criminal activities. The original data gave Johannesburg 5/10 for safety and 8/10 
+                    for housing (just to name a few), and these scores I altered slightly to portray how I 
+                    personally as well as a number of people I have consulted experience Joburg. After 
+                    speaking to some people who live in these areas, I decided that for my artwork I wanted 
+                    to portray the dangers that some of Joburg’s residents go through while others blissfully 
+                    live in relative peace and safety. I wanted my art to represent how less-privileged 
+                    people view Johannesburg, admittedly I can’t know whether my portrayal is accurate seeing 
+                    that I am privileged enough to live in a nice area.
+                </p>
+                <p>
+                    The final artwork that I made required mixing (in a sense) all the aspects’ colours to 
+                    make the “colour of Joburg”. I put this colour on a canvas and put a silhouette of the 
+                    Johannesburg skyline in front of it to complete the art. As a photographer I understand 
+                    the power of pictures and the feelings that colour can make people feel. After finishing 
+                    my artwork, I believe that my artwork represents Johannesburg’s true colours (the fact 
+                    that the final colour is red-leaning means that there are much more bad aspects about 
+                    Johannesburg than good ones). I might have had a bit of a bias while creating this piece 
+                    seeing that I am personally pessimistic with regards to the city seeing that I have heard 
+                    and seen many terrible things while living here and I personally struggle to see 
+                    improvement.
+                </p>
+                <p>
+                    Initially I thought this personal opinion/bias would be a problem, but after visiting Fernanda B. Viégas and 
+                    Martin Wattenberg’s paper, <i>Artistic Data Visualization: Beyond Visual Analytics</i> (2007) 
+                    again I realized that data driven art or artistic data visualization is visualization 
+                    that expresses the point of view of the artist (Viégas and Wattenberg, 2007). Thus, I 
+                    believe that me expressing my own feelings and how I personally see Joburg is in line with what 
+                    data driven art is.
+                </p>
+                <p>
+                    With regards to interaction, I referred back to <i>What is Interaction for Data Visualization</i> 
+                    (2020) by Evanthia Dimara, and Charles Perin. Dimara and Perin explain various components 
+                    of interaction that they have found through cross referencing and research. They also state 
+                    that interaction within the Human-Computer Interaction field relies on simplicity, minimal 
+                    information, user experience, and user embodiment (Dimara and Perin, 2020). They ultimately 
+                    came up with their own working definition of interactivity within data visualization that I 
+                    have kept in mind while making this art piece. Their definition is: “Interaction for 
+                    visualization is the interplay between a person and a data interface involving a data-related 
+                    intent, at least one action from the person and an interface reaction that is perceived as 
+                    such” (Dimara and Perin, 2020; p. 8).
+                </p>
+                <p>
+                    Looking at the above definition I believe that my artwork is interactive: the user will start 
+                    a dialogue/interplay with my piece by looking at it with an initial opinion or view regarding 
+                    Johannesburg, this is the user’s action, the reaction from my work is that it will try to 
+                    invoke some kind of emotion from the reader, it will actively try and get my point across 
+                    which would either disagree with the users initial view or reinforce it. The fact that the colour 
+                    that is being portrayed as leaning towards a red spectrum will portray the overall 
+                    message/intent of the artwork (showing the user that Johannesburg is struggling on many fronts) 
+                    and ultimately give the artwork its meaning. This dialogue between the user and my art is proof
+                    (I believe) that my data driven art is interactive, and is in line with the definition of 
+                    interaction that I was taught this semester.
+                </p>
+                <p>
+                    According to Knaflic’s <i>Storytelling with Data</i> Chapter 6 a good visual model is one that is made 
+                    with the user in mind, and in order to use visual models to portray a narrative there must be a 
+                    point that is clear to the user. To improve the clarity of this point you can emphasize it 
+                    through colour, size, placement, etc. (Knaflic, 2015). Looking at what Knaflic said I believe 
+                    that my data driven art is a good visual model seeing that designed it in such a way that it 
+                    would stand out from the website with its black silhouette and 
+                    dark reddish background. This was done to emphasize my point. I had the user in mind throughout 
+                    the process of making my art: I designed the website to be easy on the eyes and calming with its 
+                    soft blue colours, I thought that if the user navigated through the website, it would make them 
+                    feel a certain way which would shift almost immediately when interacting with my artwork, ultimately 
+                    driving home the point of view that I am trying to portray with my art.
+                </p>
+                <p>
+                    In conclusion, I believe that my artwork is interactive since it does have an interplay with the user. 
+                    It is a good visual model since it emphasises my point and tries to tell a narrative about living in 
+                    Johannesburg, and finally I believe that manipulating the piece slightly to share my personal views and 
+                    experiences is in line with what data driven art is and what it is usually used for.
+                </p>
+            </article>
+            <footer>
+                <p class = "h-card">
+                    <section class = "p-name">Franco Steyn</section>
+                    
+                    <section class = "p-postal-code">2194</section>
+                    
+                    <section class = "tel">071-612-8379</section>
+                    
+                    <a class = "e-mail" href = "2109231@students.wats.ac.za">2109231@students.wits.ac.za</a>
+                </p>
+              </footer>
+        </body>
+    </main>
+    
+</body>
+</html>

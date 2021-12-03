@@ -34,12 +34,24 @@ h2{
     padding-left: 12%;
 }
 
+
+
+h3{
+  color: rgb(93, 133, 138);
+    font-size: 25px;
+    padding-left: 12%;
+    padding-top: 5%;
+}
+
 article{
   color: rgb(206, 206, 206);
   text-align: justify;
   padding-left: 8%;
   padding-right: 8%;
   padding-bottom: 15%;
+}
+.artwork{
+  padding-bottom: 50%;
 }
 
 footer{
@@ -52,6 +64,8 @@ footer{
   bottom: 0;
   position: absolute;
 }
+
+
 
 .onPageLinks a{
   

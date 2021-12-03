@@ -1,0 +1,76 @@
+div{
+width: 100px;
+height: 100px;
+margin: 20px;
+z-index: 2;
+
+};
+
+
+.container{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: 20px;   
+    
+}
+
+
+
+.artImage{
+    width: 700px;
+    height: 510px;            
+    position: absolute;
+    z-index: 3;
+    transform: translate(15px, 30px);
+    
+}
+.box{
+    width: 689.5px;
+    height: 500px;            
+    position: absolute;
+    opacity: 0.4;
+    
+}
+
+.stack-top{
+    z-index: 1;
+    margin: 20px;
+    
+}
+
+@media screen and (max-width:800px){
+    .artImage{
+        width: 500px;
+        height: 310px;            
+        position: absolute;
+        z-index: 3;
+        transform: translate(15px, 30px);
+        
+    }
+    .box{
+        width: 489.5px;
+        height: 300px;            
+        position: absolute;
+        opacity: 0.4;
+        
+    }
+}
+
+@media screen and (max-width:430px){
+    .artImage{
+        width: 347px;
+        height: 210px;            
+        position: absolute;
+        z-index: 3;
+        transform: translate(16px, 30px);
+        
+    }
+    .box{
+        width: 339.5px;
+        height: 200px;            
+        position: absolute;
+        opacity: 0.4;
+        
+    }
+}

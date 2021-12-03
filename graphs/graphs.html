@@ -7,7 +7,7 @@
     <script type = "module"  src = "../JS/graphs.js"></script>
     <link rel="stylesheet" href="../Style/style.css">
     <link rel="stylesheet" href="../Style/nav.css">
-    
+    <link rel="stylesheet" href="../Style/art.css">
     
 
     <title>Data Visualization</title>
@@ -27,6 +27,9 @@
         <body>
             <h1>DATA</h1>
 
+            <h2>EXAM CHART (AUCKLAND)</h2>
+            <svg id = "graph4" width = "650" height = "650"></svg>
+
             <h2>JOBURG QUALITY OF LIFE BAR CHART</h2>
             <svg id = "graph1" width = "1000" height = "400"></svg>
 
@@ -40,6 +43,8 @@
             
             <svg id = "graph3" width = "650" height = "500"></svg>
             <ul id = "graph3List"></ul>
+
+            
 
             <article>
                 <h2>REFLECTION ON MY GRAPHS</h2>
@@ -91,10 +96,34 @@
                     3AM for several days I could not figure out how to do this. I have tried working with different graphs 
                     to see whether that coud help fix my problems: unfortunately it did not. Thus I settled for simple interaction 
                     where the user can hover over the chart for a little animation and the reveal of the lables of each segment.
-                    I did this in order to let the user look at the pie chart to get a general idea of the qualiuty of LIFEin Dar Es Salaam 
+                    I did this in order to let the user look at the pie chart to get a general idea of the quality of life in Dar Es Salaam 
                     without knowing the particualar aspects of this quality of life initially. If the user wanted more detail about 
                     the different aspects contained in the chart they can simply hover their mouse over the chart or click on it
                     if they are looking at it on mobile.
+                </p>
+                <p>
+                    My final interactive data visualization (which I placed at the top of this page) is a bubble chart. 
+                    I am embarrassed to admit that like my previous interactive graph I have bit off more than i can chew:
+                    my initial idea for this graph was to let the user move the bubbles around, the bubbles would return back
+                    to their original positions after the user lets go of the bubble, the bubbles would have been blanks and the 
+                    label of the selected bubble (the one that the user is moving around) would appear while being dragged. This was however very difficult to figure
+                    out, and I decided to settle for simple interaction. The user can look at the bubbles that represent the 
+                    different aspects of life of the city, Auckland, in New Zealand. The bubbles vary in size depending on the 
+                    aspect's score that they represent. When the user hovers over (or taps on in mobile view) a bubble it will 
+                    swell in size and labels will fill the chart revealing the the names and scores of each bubble. When the 
+                    user moves the mouse off of a bubble (or taps off of it in mobile view) the bubble will shrink a bit and the 
+                    outer border of the bubble will become a bit thicker. The reason for the bigger border and the bubble not reverting 
+                    back to its original size is so that the user can see which bubbles they already checked, I also wanted to show
+                    the user how good Auckland's quality of life is (I found that Auckland is ranked number 1 best city in the world), 
+                    and I believe that after all the bubbles have been checked and changed that the chart as a whole would would look 
+                    big and aesthetically pleasing which would represent how good the city is. The reason why I chose this city to represent 
+                    is because in my previous interactive chart I represented one of the worse cities in the world, and I wanted to 
+                    show the contrast between the two. Before the user touches any of the charts they can get a blank idea of the chart, 
+                    but after the user hovered over all of the bubbles they will have understood what each bubble represents and the 
+                    new look of the chart will represent how good the city supposedly is to live in. Ultimately what I'm trying to do 
+                    with this graph is to show contrast between the best city to live in, and the worst, to show people the gap 
+                    between the two. I might be idealistic, but I'm hoping that when being confronted by this it might spark some 
+                    sort of change.
                 </p>
                 <p>
                     Ultimately, I feel that my charts are effective in communicating the information that I wanted 
@@ -104,10 +133,44 @@
                 </p>
             </article>
               
+            <article class="artwork">
+            <h2>DATA DRIVEN ART</h2>
+
+            <!-- The following was the individual colours used to make the artwork but i deemed it unimportant to share-->
+
+            <!-- <h3>COLOURS OF LIFE:</h3> 
+                HOUSING <div style="background-color: #0a006686;border: 5px solid rgb(255, 255, 255);"></div>
+                INTERNET ACCESS <div style="background-color: #0a006686;border: 5px solid rgb(255, 255, 255);"></div>
+                COST OF LIVING<div style="background-color: #4d004a8c;border: 5px solid rgb(255, 255, 255);"></div>
+                SAFETY<div style="background-color: #ff000088;border: 5px solid rgb(255, 255, 255);"></div>
+                LEISURE & CULTURE <div style="background-color: #ff000081;border: 5px solid rgb(255, 255, 255);"></div>
+                COMMUTE <div style="background-color: #86000085;border: 5px solid rgb(255, 255, 255);"></div>
+                HEALTHCARE<div style="background-color: #86000085;border: 5px solid rgb(255, 255, 255);"></div>
+                TOLERANCE <div style="background-color: #86000085;border: 5px solid rgb(255, 255, 255);"></div>
+                ECONOMY <div style="background-color: #5c000085;border: 5px solid rgb(255, 255, 255);"></div>
+            -->
+            <ul class="onPageLinks">
+                <li><a href="../blogs/blog14.html">Reflection on my data driven art.</a></li>
+            </ul>
+
+            <h3 class = "auklandTitle">THE COLOUR OF JOBURG</h3>
+<div class = "container">
+    <img class="artImage" src = "../images/kisspng-johannesburg-skyline-silhouette-photography-art-city-silhouette-5ac446d253bbb0.927268911522812626343.png" 
+    alt = "Silhouette of the Johannesburg skyline (Free download from CleanPNG.com).">
+            <div class = "box" style="background-color: #0a006686;"></div>
+            <div class = "box" style="background-color: #4d004a8c;"></div>
+            <div class = "box" style="background-color: #ff000088;"></div>
+            <div class = "box" style="background-color: #ff000081;"></div>
+            <div class = "box" style="background-color: #86000085;"></div>
+            <div class = "box" style="background-color: #86000085;"></div>
+            <div class = "box" style="background-color: #86000085;"></div>
+            <div class = "box" style="background-color: #5c000085;"></div>
+            <div class = "box" style="background-color: #0a006686;"></div>
+</div>
+
+            </article>
+
             
-            
-        
-              
               
             <footer>
                 <p class = "h-card">
