@@ -248,8 +248,9 @@ async function getNewYorkData()
     var arc = d3.arc()
         .innerRadius(0)
         .outerRadius(radius - 50)
-        .padAngle(.1)
+        .padAngle(0)
         .padRadius(70);
+        
 
     var arcs = g.selectAll('arc')
         .data(data)
@@ -297,7 +298,7 @@ else
     var arc = d3.arc()
         .innerRadius(0)
         .outerRadius(radius - 120)
-        .padAngle(.1)
+        .padAngle(0)
         .padRadius(70);
 
     var arcs = g.selectAll('arc')
